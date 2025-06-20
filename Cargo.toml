@@ -1,0 +1,10 @@
+[lib]
+crate-type = ["cdylib"]
+
+[package]
+name = "rofi-zed"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rofi-mode = "0.4.1"
