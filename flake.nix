@@ -21,16 +21,17 @@
             rustfmt
             rust-analyzer
             cargo
-            # pkg-config
-            # glib
-            # pango
-            # (pkgs.writeShellScriptBin "rofi-zed" ''
-            #   rofi -show combi -combi-modi zed,drun -display-zed "Project"
-            # '')
+            pkg-config
+            glib
+            pango
+            rofi
+            (pkgs.writeShellScriptBin "rofi-zed" ''
+              rofi -show combi -combi-modi zed,drun
+            '')
           ];
-          # shellHook = ''
-          #   export ROFI_PLUGIN_PATH="$(pwd)/target/debug"
-          # '';
+          shellHook = ''
+            export ROFI_PLUGIN_PATH="$(pwd)/target/debug"
+          '';
         };
       });
     };
