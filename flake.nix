@@ -25,6 +25,7 @@
             glib
             pango
             rofi
+            sqlite
             (pkgs.writeShellScriptBin "rofi-zed" ''
               rofi -show combi -combi-modi zed,drun
             '')
