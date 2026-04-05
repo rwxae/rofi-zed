@@ -1,6 +1,6 @@
 # rofi-zed
 
-![Demo](./docs/demo.mp4)
+https://github.com/user-attachments/assets/a2220191-22c7-48c9-b7e3-5e62b13d0ecd
 
 Quickly open recent Zed Editor projects with Rofi.
 
