@@ -27,7 +27,7 @@
             rofi
             sqlite
             (pkgs.writeShellScriptBin "rofi-zed" ''
-              rofi -show combi -combi-modi window,zed,drun
+              rofi -show combi -combi-modi window,zed-recent,drun
             '')
           ];
           shellHook = ''

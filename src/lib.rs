@@ -8,7 +8,7 @@ pub struct ZedMode<'rofi> {
 }
 
 impl<'rofi> Mode<'rofi> for ZedMode<'rofi> {
-    const NAME: &'static str = "zed\0";
+    const NAME: &'static str = "zed-recent\0";
 
     fn init(api: Api<'rofi>) -> Result<Self, ()> {
         let entries = zed::get_recent_projects().ok_or(())?;
