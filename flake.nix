@@ -20,18 +20,16 @@
       devShells = eachSystem (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            rustc
-            rustfmt
-            rust-analyzer
+            cairo
             cargo
-            pkg-config
             glib
             pango
+            pkg-config
             rofi
+            rust-analyzer
+            rustc
+            rustfmt
             sqlite
-            (pkgs.writeShellScriptBin "rofi-zed" ''
-              rofi -show combi -combi-modi window,zed-recent,drun
-            '')
           ];
           shellHook = ''
             export ROFI_PLUGIN_PATH="$(pwd)/target/debug"
