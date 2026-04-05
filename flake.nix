@@ -14,6 +14,9 @@
         ] (system: fn (import nixpkgs { inherit system; }));
     in
     {
+      packages = eachSystem (pkgs: {
+        default = pkgs.callPackage ./package.nix { };
+      });
       devShells = eachSystem (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
