@@ -26,6 +26,11 @@ rustPlatform.buildRustPackage {
     sqlite
   ];
 
+  postInstall = ''
+    mkdir -p $out/lib/rofi
+    mv $out/lib/lib*.so $out/lib/rofi/
+  '';
+
   meta = {
     description = "A Rofi plugin for Zed";
     platforms = [
